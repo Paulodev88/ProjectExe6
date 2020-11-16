@@ -43,7 +43,7 @@ public class TecnicoController implements Initializable {
 
     @FXML
     public void onBtNovoTecnico(){
-
+        Main.changeScreen("NovoTecnico");
     }
 
     @FXML

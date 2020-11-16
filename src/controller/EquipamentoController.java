@@ -57,7 +57,7 @@ public class EquipamentoController implements Initializable {
 
     @FXML
     void btNovoEquipamentoAction(ActionEvent event) {
-
+        Main.changeScreen("NovoEquipamento");
     }
 
     @FXML
