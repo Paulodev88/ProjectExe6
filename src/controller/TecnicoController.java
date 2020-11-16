@@ -1,8 +1,10 @@
 package controller;
 
 
+import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -42,6 +44,11 @@ public class TecnicoController implements Initializable {
     @FXML
     public void onBtNovoTecnico(){
 
+    }
+
+    @FXML
+    void onBtVoltarAction(ActionEvent event) {
+        Main.changeScreen("Main");
     }
 
 

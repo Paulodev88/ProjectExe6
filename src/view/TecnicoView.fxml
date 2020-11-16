@@ -14,7 +14,7 @@
       <Label layoutX="69.0" layoutY="118.0" text="ID:" />
       <Label layoutX="53.0" layoutY="165.0" text="Email:" />
       <Label layoutX="35.0" layoutY="214.0" text="Telefone:" />
-      <Button layoutX="498.0" layoutY="350.0" mnemonicParsing="false" text="Voltar" />
+      <Button layoutX="498.0" layoutY="350.0" mnemonicParsing="false" onAction="#onBtVoltarAction" text="Voltar" />
       <Button layoutX="400.0" layoutY="350.0" mnemonicParsing="false" onAction="#onBtNovoTecnico" text="Novo Tecnico" />
       <ListView layoutX="359.0" layoutY="74.0" prefHeight="200.0" prefWidth="200.0" />
       <Label fx:id="txtId" layoutX="146.0" layoutY="118.0" />

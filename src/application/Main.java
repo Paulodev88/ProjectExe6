@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     private static Stage stage;
-
     private static Scene mainScene;
     private static Scene tecnicoScene;
     private static Scene equipamentoScene;
@@ -27,16 +26,16 @@ public class Main extends Application {
         mainScene = new Scene(main, 600, 400);
 
         Parent tecnico = FXMLLoader.load(getClass().getResource("/view/TecnicoView.fxml"));
-        tecnicoScene = new Scene(main, 600, 400);
+        tecnicoScene = new Scene(tecnico, 600, 400);
 
         Parent novoTecnico = FXMLLoader.load(getClass().getResource("/view/NovoTecnicoView.fxml"));
-        novoTecnicoScene = new Scene(main, 600, 400);
+        novoTecnicoScene = new Scene(novoTecnico, 600, 400);
 
         Parent equipamento = FXMLLoader.load(getClass().getResource("/view/EquipamentoView.fxml"));
-        equipamentoScene = new Scene(main, 600, 400);
+        equipamentoScene = new Scene(equipamento, 600, 400);
 
         Parent novoEquipamanto = FXMLLoader.load(getClass().getResource("/view/NovoEquipamentoView.fxml"));
-        novoEquipamentoScene = new Scene(main, 600, 400);
+        novoEquipamentoScene = new Scene(novoEquipamanto, 600, 400);
 
 
         primaryStage.setScene(mainScene);

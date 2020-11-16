@@ -1,5 +1,6 @@
 package controller;
 
+import application.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -61,7 +62,7 @@ public class EquipamentoController implements Initializable {
 
     @FXML
     void btVoltarAction(ActionEvent event) {
-
+        Main.changeScreen("Main");
     }
 
     @Override
