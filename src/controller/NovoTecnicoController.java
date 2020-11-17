@@ -3,9 +3,15 @@ package controller;
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import model.entities.Tecnico;
+import view.util.Contraints;
 
-public class NovoTecnicoController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class NovoTecnicoController implements Initializable {
 
     @FXML
     private TextField txtID;
@@ -20,8 +26,13 @@ public class NovoTecnicoController {
     private TextField txtTelefone;
 
     @FXML
-    void btSalvaAction(ActionEvent event) {
-
+    public void btSalvaAction(ActionEvent event) {
+        Tecnico tecnico = new Tecnico();
+        tecnico.setId(Integer.parseInt(txtID.getText()));
+        tecnico.setName(txtNome.getText());
+        tecnico.setEmail(txtEmail.getText());
+        tecnico.setTelefone(Integer.parseInt(txtTelefone.getText()));
+        System.out.println(tecnico);
     }
 
     @FXML
@@ -29,4 +40,10 @@ public class NovoTecnicoController {
         Main.changeScreen("Main");
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Contraints.setTextFieldInteger(txtID);
+        Contraints.setTextFieldInteger(txtTelefone);
+
+    }
 }

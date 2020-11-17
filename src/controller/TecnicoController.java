@@ -34,6 +34,16 @@ public class TecnicoController implements Initializable {
 
     private ObservableList<Tecnico> observableList;
 
+    public List<Tecnico> tecnicos= new ArrayList<>();
+
+    public void tecnico(Tecnico tecnico){
+        this.tecnicos.add(tecnico);
+    }
+
+    public Label getTxtTelefone() {
+        return txtTelefone;
+    }
+
     @FXML
     public void onBtAllAction(){
         for (Tecnico tecnico : comboBoxTecnico.getItems()){
@@ -64,10 +74,10 @@ public class TecnicoController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        List<Tecnico> list = new ArrayList<>();
-        list.add(new Tecnico(1, "Paulo", "paulo.ricaro@fies.org.br", 999999999));
 
-        observableList = FXCollections.observableArrayList(list);
+        tecnicos.add(new Tecnico(1, "Paulo", "paulo.ricaro@fies.org.br", 999999999));
+
+        observableList = FXCollections.observableArrayList(tecnicos);
         comboBoxTecnico.setItems(observableList);
 
         Callback<ListView<Tecnico>, ListCell<Tecnico>> factory = lv -> new ListCell<Tecnico>() {
